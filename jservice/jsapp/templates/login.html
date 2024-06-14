@@ -1,0 +1,27 @@
+{% load static %}
+<!DOCTYPE html>
+<html>
+ <head>
+  <title>Login and Sign-up Form</title>
+  <link href="{% static 'reg.css' %}" rel="stylesheet" type="text/css">
+ </head>
+ <body>
+  <div class="container">
+    <h1>Login Form</h1>
+    <form id="loginForm">
+      <label for="username">Username:</label>
+      <input type="text" id="username" placeholder="Enter your username" required>
+
+      <label for="password">Password:</label>
+      <input type="password" id="password" placeholder="Enter your password" required>
+            <div class="captcha-box">
+              <label for="captcha">CAPTCHA:</label>
+              <input type="text" id="captcha" placeholder="Enter the result">
+              <span id="challenge"></span>
+            </div>
+      <button type="submit">Login</button>
+      <p class="signup-link">Don't have an account? <a href="templates\reg.html" id="showSignupForm">Sign Up</a></p>
+    </form>
+  </div>
+ </body>
+</html>
